@@ -65,6 +65,9 @@
         </style>
     </head>
     <body>
-        <example-component></example-component>
+    <div id="app">
+        <axios-component></axios-component>
+    </div>
     </body>
+    <script src="{{ asset('js/app.js') }}"></script>
 </html>

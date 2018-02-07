@@ -6,5 +6,7 @@
             "email": "asahara.t@tam-tam.co.jp"
         }
     ],
-    "require": {}
+    "require": {
+        "barryvdh/laravel-ide-helper": "^2.4"
+    }
 }
