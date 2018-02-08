@@ -1,16 +1,18 @@
 <template>
-    <ul v-if="posts && posts.length">
-        <li v-for="post in posts">
-            <p><strong>{{post.title}}</strong></p>
-            <p>{{post.body}}</p>
-        </li>
-    </ul>
+    <div>
+        <ul v-if="posts && posts.length">
+            <li v-for="post in posts">
+                <p><strong>{{post.title}}</strong></p>
+                <p>{{post.body}}</p>
+            </li>
+        </ul>
 
-    <ul v-if="errors && errors.length">
-        <li v-for="error in errors">
-            {{error.message}}
-        </li>
-    </ul>
+        <ul v-if="errors && errors.length">
+            <li v-for="error in errors">
+                {{error.message}}
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
