@@ -1,17 +1,19 @@
 <template>
     <div>
-        <ul v-if="posts && posts.length">
-            <li v-for="post in posts">
-                <p><strong>{{post.title}}</strong></p>
-                <p>{{post.body}}</p>
-            </li>
-        </ul>
+        <!--<ul v-if="posts && posts.length">-->
+            <!--&lt;!&ndash;<li v-for="post in posts">&ndash;&gt;-->
+                <!--&lt;!&ndash;<p><strong>{{post.title}}</strong></p>&ndash;&gt;-->
+                <!--&lt;!&ndash;<p>{{post.body}}</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+            <!--<p>{{posts}}</p>-->
+        <!--</ul>-->
 
-        <ul v-if="errors && errors.length">
-            <li v-for="error in errors">
-                {{error.message}}
-            </li>
-        </ul>
+        <!--<ul v-if="errors && errors.length">-->
+            <!--<li v-for="error in errors">-->
+                <!--{{error.message}}-->
+            <!--</li>-->
+        <!--</ul>-->
+        aa
     </div>
 </template>
 
@@ -28,10 +30,10 @@
 
         // Fetches posts when the component is created.
         created() {
-            axios.get('')
+            axios.get('https://itunes.apple.com/lookup?amgArtistId=468749')
                 .then(response => {
                     // JSON responses are automatically parsed.
-                    this.posts = response.data
+                    this.posts = response
                 })
                 .catch(e => {
                     this.errors.push(e)

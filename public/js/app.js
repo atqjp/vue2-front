@@ -43093,6 +43093,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -43109,9 +43111,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     created: function created() {
         var _this = this;
 
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('').then(function (response) {
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('https://itunes.apple.com/lookup?amgArtistId=468749').then(function (response) {
             // JSON responses are automatically parsed.
-            _this.posts = response.data;
+            _this.posts = response;
         }).catch(function (e) {
             _this.errors.push(e);
         });
@@ -43135,31 +43137,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm.posts && _vm.posts.length
-      ? _c(
-          "ul",
-          _vm._l(_vm.posts, function(post) {
-            return _c("li", [
-              _c("p", [_c("strong", [_vm._v(_vm._s(post.title))])]),
-              _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(post.body))])
-            ])
-          })
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.errors && _vm.errors.length
-      ? _c(
-          "ul",
-          _vm._l(_vm.errors, function(error) {
-            return _c("li", [
-              _vm._v("\n            " + _vm._s(error.message) + "\n        ")
-            ])
-          })
-        )
-      : _vm._e()
-  ])
+  return _c("div", [_vm._v("\n    aa\n")])
 }
 var staticRenderFns = []
 render._withStripped = true
